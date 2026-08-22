@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Techno Team</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/CSS/question.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <!--  Header Started in here -->
+
+    <header>
+
+        <!-- Logo -->
+        <div id="logo">
+            <h1> techno <img src="images/ai-icon.png" alt="AI Icon"> </h1>
+        </div>
+
+
+        <!-- Navigation -->
+        <nav id="nav-menu">
+
+            <ul>
+                <li> <a href="./index.html">Home</a> </li>
+                <li> <a href="./services.html">Services</a> </li>
+                <li> <a href="./portfolio.html">Portfolio</a> </li>
+                <li> <a href="./testimonials.html">Testimonials</a> </li>
+                <li> <a href="./team.html">Team</a> </li>
+
+                <!-- Dropdown -->
+                <li class="has-dropdown"> <a href="#">Menu</a>
+
+                    <ul>
+                        <li> <a href="about.html">About</a> </li>
+                        <li> <a href="pricing.html">Pricing</a> </li>
+                        <li> <a href="question.html">FAQs</a> </li>
+                        <li> <a href="terms.html">Terms & Conditions</a> </li>
+                        <li> <a href="privacy.html">Privacy Policy</a> </li>
+                        <li> <a href="blog.html">Blogs</a> </li>
+                        <li> <a href="page.html">Blog Detail Page</a> </li>
+                    </ul>
+                </li>
+                <li> <a href="blog.html">News</a> </li>
+            </ul>
+        </nav>
+
+
+        <!-- Burger Menu -->
+        <button id="hamburger" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Dark / Light Mode -->
+        <button id="dark" onclick="darkThem()"> <i class="fa-solid fa-sun" id="them-icon"></i> </button>
+
+        <!-- Quote Button -->
+        <button id="quote-btn"> GET QUOTES </button>
+
+    </header>
+
+    <!--  End of Header -->
+
+
+    <!--  Main Start  -->
+
+    <main>
+
+        <!-- Page Header -->
+        <div class="header-2">
+            <a href="index.html"> Home </a> 
+            <p> / Testimonials </p>
+        </div>
+
+
+ <!-- Question Section Started -->
+
+<section class="question">
+
+    <!-- Description -->
+    <div class="discribtion">
+        <h1>Frequently Asked Questions</h1>
+        <p>Your questions answered clearly and effectively</p>
+    </div>
+
+
+    <!-- Accordion -->
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+
+        <!-- Question 1 -->
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+
+                    <strong>
+                        <i class="fa-regular fa-circle-question"></i>
+                        What is web hosting and domain?
+                    </strong>
+
+                </button>
+
+            </h2>
+
+
+            <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show">
+
+                <div class="accordion-body">
+
+                    Web domain and hosting are the backbone of a website,
+                    where the domain is the address, and hosting is the
+                    server where all files are stored.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Question 2 -->
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+
+                    <strong>
+                        <i class="fa-regular fa-circle-question"></i>
+                        Which server is best for websites, Linux or Windows?
+                    </strong>
+
+                </button>
+
+            </h2>
+
+
+            <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse">
+
+                <div class="accordion-body">
+
+                    Linux is generally better for stability and cost,
+                    while Windows is great for .NET applications and
+                    integration with Microsoft products.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Question 3 -->
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+
+                    <strong>
+                        <i class="fa-regular fa-circle-question"></i>
+                        Google Cloud or Amazon server, which is better and faster?
+                    </strong>
+
+                </button>
+
+            </h2>
+
+
+            <div
+                id="panelsStayOpen-collapseThree"
+                class="accordion-collapse collapse">
+
+                <div class="accordion-body">
+
+                    Both offer excellent speed and reliability,
+                    but the choice depends on specific needs like
+                    pricing, features, and scalability.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Question 4 -->
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFour">
+
+                    <strong>
+                        <i class="fa-regular fa-circle-question"></i>
+                        Why is organic SEO important for all businesses?
+                    </strong>
+
+                </button>
+
+            </h2>
+
+
+            <div
+                id="panelsStayOpen-collapseFour"
+                class="accordion-collapse collapse">
+
+                <div class="accordion-body">
+
+                    Organic SEO drives long-term traffic,
+                    builds trust with users, and reduces the
+                    dependency on paid ads for visibility.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- Question Section End -->
+        <!--  Footer Section Started  -->
+
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+
+                    <h1> techno <img src="images/ai-icon.png"  alt="AI Icon"> </h1>
+                    <p> We provide innovative solutions tailored to your needs. Join us in transforming your digital landscape. </p>
+
+
+                    <!-- Social Media -->
+
+                    <div class="social-media-footer">
+
+                        <h3> Follow Us </h3>
+
+                        <div class="social-icons">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Services -->
+
+                <div class="footer-box">
+                    <h2> Our Services </h2>
+
+                    <ul>
+                        <li> Web Design </li>
+                        <li> App Developmen </li>
+                        <li> Cloud Solutions </li>
+                        <li> SEO Services </li>
+                    </ul>
+                </div>
+
+
+                <!-- Information -->
+
+                <div class="footer-box">
+
+                    <h2> Information </h2>
+
+                    <ul>
+                        <li> About Us </li>
+                        <li> Portfolio </li>
+                        <li> Contact </li>
+                        <li> Privacy Policy </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Get In Touch -->
+
+                <div class="footer-box contact-box">
+
+                    <h2> Get In Touch </h2>
+
+                    <ul class="contact-list">
+
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span> 1234 Business St., City, Country </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-phone"></i>
+                            <span> +123 456 7890 </span>
+
+                        </li>
+                        <li> <i class="fa-solid fa-envelope"></i> <span> support@example.com </span> </li>
+
+                    </ul>
+
+
+                    <!-- Newsletter -->
+
+                    <div class="newsletter">
+
+                        <h2> Newsletter </h2>
+                        <p> Subscribe to our newsletter for the latest updates! </p>
+
+                        <div class="newsletter-form">
+
+                            <input type="email" placeholder="Email Address">
+                            <button type="submit"><i class="fa-regular fa-paper-plane"></i> </button>
+                    </div>
+                          </div>
+                              </div>
+                                    </div>
+
+
+            <!-- Copyright -->
+
+            <div class="copy">
+
+                <p>  © 2026 Your Company. Designed with passion by
+                    <span>  Miss Safora Mirzaee </span>
+                </p>
+
+            </div>
+
+        </footer>
+
+        <!-- End of footer section -->
+
+    </main>
+
+
+    <!-- Loading  -->
+
+    <div id="preloader">
+
+        <div id="loader-logo">
+            techno<span></span>
+        </div>
+
+        <div class="loader-ring"></div>
+
+    </div>
+
+    <!--  Scripts -->
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your JavaScript -->
+<script src="JS/question.js"></script>
+</body>
+
+</html>
