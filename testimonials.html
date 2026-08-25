@@ -28,7 +28,7 @@
 
     <!--  Heading strart...  -->
 
-    <header>
+    <header id="header">
 
         <!-- Logo -->
         <div id="logo">
@@ -44,69 +44,25 @@
 
             <ul>
 
-                <li>
-                    <a href="./index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="./services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="./portfolio.html">Portfolio</a>
-                </li>
-
-                <li>
-                    <a href="./testimonials.html">Testimonials</a>
-                </li>
-
-                <li>
-                    <a href="#team">Team</a>
-                </li>
+                <li> <a href="./index.html">Home</a></li>
+                <li> <a href="./services.html">Services</a> </li>
+                <li> <a href="./portfolio.html">Portfolio</a> </li>
+                <li> <a href="./testimonials.html">Testimonials</a> </li>
+                <li> <a href="team.html">Team</a> </li>
 
                 <!-- Dropdown -->
-                <li class="has-dropdown">
-
-                    <a href="#">Menu</a>
-
+                <li class="has-dropdown" <a href="#"> Menu</a>
                     <ul>
-
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Pricing</a>
-                        </li>
-
-                        <li>
-                            <a href="#">FAQs</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Terms & Conditions</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Blogs</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Blog Detail Page</a>
-                        </li>
-
+                        <li> <a href="about.html">About</a> </li>
+                        <li> <a href="pricing.html">Pricing</a> </li>
+                        <li> <a href="question.html">FAQs</a> </li>
+                        <li> <a href="terms.html">Terms & Conditions</a> </li>
+                        <li> <a href="privacy.html">Privacy Policy</a> </li>
+                        <li> <a href="blog.html">Blogs</a> </li>
+                        <li> <a href="page.html">Blog Detail Page</a> </li>
                     </ul>
-
                 </li>
-
-                <li>
-                    <a href="#">News</a>
-                </li>
-
+                <li> <a href="blog.html">News</a> </li>
             </ul>
 
         </nav>
@@ -123,328 +79,314 @@
             <i class="fa-solid fa-sun" id="them-icon"></i>
         </button>
 
-
         <!-- Quote Button -->
-        <button id="quote-btn">
-            GET QUOTES
-        </button>
+        <button id="quote-btn"> <a href="get.html">GET QUOTES</a></button>
 
     </header>
 
-    <!-- ================= HEADER END ================= -->
+    <!--  End of header   -->
 
 
-    <!-- ================= MAIN START ================= -->
+    <!--  Start of Main Section  -->
 
     <main>
 
         <!-- Page Header -->
         <div class="header-2">
+            <a href="index.html"> Home </a>
+            <p> / Testimonials </p>
+        </div>
 
-            <a href="index.html">
-                Home
-            </a>
 
-            <p>
-                / Testimonials
-            </p>
+        <!-- Testimonials Section Started -->
+
+<section id="testimonials">
+
+    <div class="discribtion">
+        <h1>What Our Clients Say</h1>
+        <p>Real stories from our satisfied customers</p>
+    </div>
+
+
+    <!-- Bootstrap Carousel -->
+
+    <div id="testimonialCarousel"
+         class="carousel slide"
+         data-bs-ride="carousel"
+         data-bs-interval="4000">
+
+        <!-- Small Buttons -->
+
+        <div class="carousel-indicators">
+
+            <button type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true">
+            </button>
+
+            <button type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide-to="1">
+            </button>
+
+            <button type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide-to="2">
+            </button>
+
+            <button type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide-to="3">
+            </button>
 
         </div>
 
 
-        <!--  TESTIMONIALS START  -->
+        <!-- Carousel Content -->
 
-        <section id="testimonials">
-
-            <!-- Section Description -->
-
-            <div class="discribtion">
-
-                <h1> What Our Clients Say </h1>
-                <p> Real stories from our satisfied customers </p>
-
-            </div>
+        <div class="carousel-inner">
 
 
-            <!--  BOOTSTRAP CAROUSEL  -->
+            <!-- Slide 1 -->
 
-            <div id="testimonialCarousel"
-                class="carousel slide"
-                data-bs-ride="carousel"
-                data-bs-interval="4000">
+            <div class="carousel-item active">
+                <div class="row g-4 justify-content-center">
 
 
-                <!-- Carousel Indicators -->
+                    <!-- Jhone -->
 
-                <div class="carousel-indicators">
+                    <div class="col-12 col-md-4">
+                        <div class="testimonial-boxes">
+                            <img src="/images/jhone.avif" alt="Jhone Doe">
+                            <span class="name">Jhone Doe </span>
+                            <span class="position"> CFO </span>
+                            <span class="stars"> ★★★★★ </span>
 
-                    <!-- Button 1 -->
+                            <p> The service was exceptional and exceeded my expectations. Highly recommend! </p>
 
-                    <button type="button"
-                        data-bs-target="#testimonialCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1">
-                    </button>
-
-
-                    <!-- Button 2 -->
-
-                    <button type="button"
-                        data-bs-target="#testimonialCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2">
-                    </button>
-
-
-                    <!-- Button 3 -->
-
-                    <button type="button"
-                        data-bs-target="#testimonialCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3">
-                    </button>
-
-
-                    <!-- Button 4 -->
-
-                    <button type="button"
-                        data-bs-target="#testimonialCarousel"
-                        data-bs-slide-to="3"
-                        aria-label="Slide 4">
-                    </button>
-
-                </div>
-
-
-                <!-- Carousel Content -->
-
-                <div class="carousel-inner">
-
-
-                    <!--  Slid 1  -->
-
-                    <div class="carousel-item active">
-
-                        <div class="row g-4 justify-content-center">
-
-
-                            <!-- Jhone -->
-
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/jhone.avif" alt="Jhone Doe">
-
-                                    <span class="name">Jhone Doe </span>
-                                    <span class="position"> CFO </span>
-                                    <span class="stars">★★★★★ </span>
-
-                                    <p> The service was exceptional and exceeded my expectations. Highly recommend! </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- Afa -->
-
-                            <div class="col-12 col-md-4">
-                                <div class="testimonial-boxes">
-                                    <img src="images/rose.jpg" alt="Afa Rose">
-                                    <span class="name">Afa Rose </span>
-                                    <span class="position"> Web Designer </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> A seamless experience with outstanding support. Absolutely love it! </p>
-                                </div>
-                            </div>
-
-
-                            <!-- Keena -->
-
-                            <div class="col-12 col-md-4">
-                                <div class="testimonial-boxes">
-                                    <img src="images/lara.avif" alt="Keena Lara">
-                                    <span class="name"> Keena Lara </span>
-                                    <span class="position"> Store Owner </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> This company truly understands customer needs and delivers with excellence. </p>
-                                </div>
-                            </div>
                         </div>
+
                     </div>
 
 
-                    <!--  Slid 2  -->
+                    <!-- Afa -->
 
-                    <div class="carousel-item">
+                    <div class="col-12 col-md-4">
 
-                        <div class="row g-4 justify-content-center">
+                        <div class="testimonial-boxes">
 
+                            <img src="/images/rose.jpg" alt="Afa Rose">
+                            <span class="name"> Afa Rose </span>
+                            <span class="position"> Web Designer </span>
+                            <span class="stars"> ★★★★★ </span>
 
-                            <!-- Fizzi -->
+                            <p> A seamless experience with outstanding support. Absolutely love it! </p>
 
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/brandon.jpg" alt="Fizzi Brandon">
-                                    <span class="name"> Fizzi Brandon </span>
-                                    <span class="position"> Freelancer </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> A top-notch experience with great attention to detail. Highly recommended! </p>
-                                </div>
-                            </div>
-
-
-                            <!-- Jhone -->
-
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-                                    <img src="images/jhone.avif" alt="Jhone Doe">
-                                    <span class="name"> Jhone Doe </span>
-                                    <span class="position"> CFO </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> The service was exceptional and exceeded my expectations. Highly recommend! </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- Afa -->
-
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/rose.jpg" alt="Afa Rose">
-                                    <span class="name"> Afa Rose </span>
-                                    <span class="position"> Web Designer </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> A seamless experience with outstanding support. Absolutely love it! </p>
-
-                                </div>
-                            </div>
                         </div>
+
                     </div>
 
 
-                    <!--  Slide 3  -->
+                    <!-- Keena -->
 
-                    <div class="carousel-item">
+                    <div class="col-12 col-md-4">
+                        <div class="testimonial-boxes">
 
-                        <div class="row g-4 justify-content-center">
+                            <img src="/images/lara.avif" alt="Keena Lara">
+                            <span class="name"> Keena Lara </span>
+                            <span class="position"> Store Owner </span>
 
+                            <span class="stars"> ★★★★★ </span>
 
-                            <!-- Keena -->
+                            <p> This company truly understands customer needs and delivers with excellence. </p>
 
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/lara.avif" alt="Keena Lara">
-                                    <span class="name"> Keena Lara </span>
-                                    <span class="position"> Store Owner </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> This company truly understands customer needs and delivers with excellence. </p>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Fizzi -->
-
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/brandon.jpg" alt="Fizzi Brandon">
-                                    <span class="name"> Fizzi Brandon </span>
-                                    <span class="position"> Freelancer </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> A top-notch experience with great attention to detail. Highly recommended! </p>
-                                </div>
-                            </div>
-
-
-                            <!-- Jhone -->
-
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/jhone.avif" alt="Jhone Doe">
-                                    <span class="name"> Jhone Doe </span>
-                                    <span class="position"> CFO </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> The service was exceptional and exceeded my expectations. Highly recommend! </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--  Slide 4  -->
-
-                    <div class="carousel-item">
-
-                        <div class="row g-4 justify-content-center">
-
-
-                            <!-- Afa -->
-
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/rose.jpg" alt="Afa Rose">
-                                    <span class="name"> Afa Rose </span>
-                                    <span class="position"> Web Designer </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> A seamless experience with outstanding support. Absolutely love it! </p>
-                                    </div>
-                            </div>
-
-
-                            <!-- Keena -->
-
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/lara.avif" alt="Keena Lara">
-                                    <span class="name"> Keena Lara </span>
-                                    <span class="position"> Store Owner </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> This company truly understands customer needs and delivers with excellence. </p>
-                                </div>
-                            </div>
-
-
-                            <!-- Fizzi -->
-
-                            <div class="col-12 col-md-4">
-
-                                <div class="testimonial-boxes">
-
-                                    <img src="images/brandon.jpg" alt="Fizzi Brandon">
-                                    <span class="name"> Fizzi Brandon </span>
-                                    <span class="position"> Freelancer </span>
-                                    <span class="stars"> ★★★★★ </span>
-                                    <p> A top-notch experience with greatattention to detail. Highly recommended! </p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- End of Testimonials -->
+
+            <!-- Slide 2 -->
+
+            <div class="carousel-item">
+                <div class="row g-4 justify-content-center">
+
+
+                    <!-- Fizzi -->
+
+                    <div class="col-12 col-md-4">
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/brandon.jpg" alt="Fizzi Brandon">
+                            <span class="name"> Fizzi Brandon </span>
+                            <span class="position"> Freelancer </span>
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p> A top-notch experience with great attention to detail. Highly recommended! </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Jhone -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/jhone.avif" alt="Jhone Doe">
+                            <span class="name"> Jhone Doe </span>
+                            <span class="position"> CFO </span>
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p> The service was exceptional and exceeded my expectations. Highly recommend! </p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Afa -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/rose.jpg" alt="Afa Rose">
+                            <span class="name"> Afa Rose </span>
+                            <span class="position"> Web Designer </span>
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p> A seamless experience with outstanding support. Absolutely love it! </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Slide 3 -->
+
+            <div class="carousel-item">
+
+                <div class="row g-4 justify-content-center">
+
+
+                    <!-- Keena -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/lara.avif" alt="Keena Lara"> 
+                            <span class="name"> Keena Lara </span>
+                            <span class="position">Store Owner</span>
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p> This company truly understands customer needs and delivers with excellence. </p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Fizzi -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/brandon.jpg" alt="Fizzi Brandon">
+                            <span class="name"> Fizzi Brandon </span>
+                            <span class="position"> Freelancer </span>
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p> A top-notch experience with great attention to detail. Highly recommended! </p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Jhone -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/jhone.avif" alt="Jhone Doe">
+                            <span class="name"> Jhone Doe </span>
+                            <span class="position">CFO </span>
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p> The service was exceptional and exceeded my expectations. Highly recommend! </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Slide 4 -->
+
+            <div class="carousel-item">
+
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-12 col-md-4">
+
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/rose.jpg" alt="Afa Rose">
+                            <span class="name"> Afa Rose </span>
+                            <span class="position"> Web Designer </span>
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p> A seamless experience with outstanding support. Absolutely love it! </p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Keena -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/lara.avif" alt="Keena Lara">
+                            <span class="name">  Keena Lara </span>
+                            <span class="position"> Store Owner </span>
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p>  This company truly understands customer needs and delivers with excellence. </p>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-4">
+
+                        <div class="testimonial-boxes">
+
+                            <img src="/images/brandon.jpg" alt="Fizzi Brandon">
+                            <span class="name"> Fizzi Brandon </span>
+                            <span class="position"> Freelancer </spa
+                            <span class="stars"> ★★★★★ </span>
+
+                            <p> A top-notch experience with great attention to detail. Highly recommended! </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- End of Testimonials---  -->
 
 
         <!--  Footer Section Started  -->
@@ -508,25 +450,15 @@
 
                 <div class="footer-box contact-box">
 
-                    <h2>
-                        Get In Touch
-                    </h2>
-
+                    <h2> Get In Touch </h2>
                     <ul class="contact-list">
-
                         <li>
-
                             <i class="fa-solid fa-location-dot"></i>
-
-                            <span>
-                                1234 Business St., City, Country
-                            </span>
-
+                            <span> 1234 Business St., City, Country </span>
                         </li>
 
 
                         <li>
-
                             <i class="fa-solid fa-phone"></i>
                             <span> +123 456 7890 </span>
 
@@ -547,10 +479,11 @@
 
                             <input type="email" placeholder="Email Address">
                             <button type="submit"><i class="fa-regular fa-paper-plane"></i> </button>
-                    </div>
-                          </div>
-                              </div>
-                                    </div>
+                      
+                            </div>
+                     </div>
+              </div>
+     </div>
 
 
             <!-- Copyright -->
@@ -568,19 +501,6 @@
         <!-- End of footer section -->
 
     </main>
-
-
-    <!-- Loading  -->
-
-    <div id="preloader">
-
-        <div id="loader-logo">
-            techno<span></span>
-        </div>
-
-        <div class="loader-ring"></div>
-
-    </div>
 
 
     <!-- Scripts  -->

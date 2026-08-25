@@ -1,14 +1,39 @@
-/* =====================================
-   LOADING ANIMATION
-===================================== */
+// Header Section
 
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
+window.addEventListener("scroll", () => {
 
-    // small minimum delay so the animation is visible even on fast loads
-    setTimeout(function () {
-        preloader.classList.add("hide");
-    }, 500);
+    const header = document.querySelector("#header");
+    const logo = document.querySelector("#logo > h1");
+    const links = document.querySelectorAll("#nav-menu a");
+    const hamburger = document.querySelector("#hamburger");
+    const hamburgerIcon = document.querySelector("#hamburger i");
+
+    if (window.scrollY > 150) {
+
+        header.style.backgroundColor = "white";
+
+        logo.style.color = "black";
+
+        links.forEach(link => {
+            link.style.color = "black";
+        });
+
+        hamburger.style.color = "black";
+        hamburgerIcon.style.color = "black";
+
+    } else {
+
+        header.style.backgroundColor = "transparent";
+
+        logo.style.color = "";
+
+        links.forEach(link => {
+            link.style.color = "";
+        });
+
+        hamburger.style.color = "";
+        hamburgerIcon.style.color = "";
+    }
 });
 
 // Burger Menu 
@@ -82,124 +107,37 @@ dropdownToggles.forEach(function (toggle) {
 
 });
 
-
-/* =====================================
-   CLOSE DROPDOWN
-===================================== */
+// Close Dropdown 
 
 document.addEventListener("click", function (event) {
 
-    document
-        .querySelectorAll(".has-dropdown.active")
-        .forEach(function (li) {
+    document.querySelectorAll(".has-dropdown.active").forEach(function (li) {
 
             if (!li.contains(event.target)) {
-
                 li.classList.remove("active");
-
             }
 
         });
 
 });
 
+// Closing the mobile menu 
 
-/* =====================================
-   CLOSE MOBILE MENU
-   WHEN NORMAL LINK IS CLICKED
-===================================== */
-
-const normalNavLinks =
-    navMenu.querySelectorAll("a:not(.has-dropdown > a)");
-
+const normalNavLinks = navMenu.querySelectorAll("a:not(.has-dropdown > a)");
 
 normalNavLinks.forEach(function (link) {
-
     link.addEventListener("click", function () {
-
         navMenu.classList.remove("active");
 
-
         const icon = hamburger.querySelector("i");
-
         icon.classList.remove("fa-xmark");
-
         icon.classList.add("fa-bars");
 
     });
 
 });
 
-/* =====================================
-   DARK / LIGHT MODE
-===================================== */
 
-const darkBtn = document.getElementById("dark");
-const body = document.body;
-
-
-/* =====================================
-   CHECK SAVED THEME
-===================================== */
-
-const savedTheme = localStorage.getItem("theme");
-
-
-if (savedTheme === "light") {
-
-    // Add light mode
-    body.classList.add("light-mode");
-
-    // Moon icon
-    darkBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-
-} else {
-
-    // Dark mode
-    body.classList.remove("light-mode");
-
-    // Sun icon
-    darkBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-
-}
-
-
-/* =====================================
-   CHANGE THEME
-===================================== */
-
-darkBtn.addEventListener("click", function () {
-
-    // Toggle light mode
-    body.classList.toggle("light-mode");
-
-
-    /* ================================
-       CHECK CURRENT MODE
-    ================================= */
-
-    if (body.classList.contains("light-mode")) {
-
-        // Light Mode
-
-        darkBtn.innerHTML =
-            '<i class="fa-solid fa-moon"></i>';
-
-        localStorage.setItem("theme", "light");
-
-
-    } else {
-
-        // Dark Mode
-
-        darkBtn.innerHTML =
-            '<i class="fa-solid fa-sun"></i>';
-
-        localStorage.setItem("theme", "dark");
-
-    }
-
-});
 // Services Section 
 
 const services = [
@@ -295,9 +233,7 @@ services.forEach(function(service, index) {
 
 });
 
-/* =====================================
-   SCROLL REVEAL FOR SERVICE CARDS
-===================================== */
+// Scroll reveal for sercives cards 
 
 const revealObserver = new IntersectionObserver(function (entries, observer) {
 
@@ -314,4 +250,50 @@ const revealObserver = new IntersectionObserver(function (entries, observer) {
 
 document.querySelectorAll(".service-card").forEach(function (card) {
     revealObserver.observe(card);
+});
+
+
+// Dark Mode Codes
+
+const backgroundSection = document.querySelector(".shado");
+const darkBtn = document.querySelector("#dark");
+const darkIcon = darkBtn.querySelector("i");
+const title = document.querySelector(".title h1");
+const paragraph = document.querySelector(".ser-par");
+const cards = document.querySelectorAll(".service-card");
+const cardTitles = document.querySelectorAll(".service-card h2");
+const cardParagraphs = document.querySelectorAll(".service-card p");
+
+
+darkBtn.addEventListener("click", function () {
+    backgroundSection.classList.toggle("dark");
+
+
+    // Main texts
+    title.classList.toggle("fonts");
+    paragraph.classList.toggle("fonts");
+
+
+    // Service cards
+    cards.forEach(function (card) {
+        card.classList.toggle("boxes");
+    });
+
+
+    // Card titles
+    cardTitles.forEach(function (title) {
+        title.classList.toggle("fonts");
+    });
+
+
+    // Card descriptions
+    cardParagraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("fonts");
+    });
+
+
+    // Moon / Sun icon
+    darkIcon.classList.toggle("fa-moon");
+    darkIcon.classList.toggle("fa-sun");
+
 });

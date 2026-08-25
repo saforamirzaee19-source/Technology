@@ -174,64 +174,6 @@ header {
     color: white;
 }
 
-
-body.light-mode {
-    background-color: #f5f5f5;
-    color: #111;
-}
-
-body.light-mode header {
-    background-color: #f5f5f5;
-    color: #111;
-}
-
-
-body.light-mode #logo h1 {
-    color: #111;
-}
-
-
-body.light-mode #nav-menu ul li a {
-    color: #111;
-}
-
-body.light-mode #nav-menu ul li a:hover {
-    color: #0d9488;
-}
-
-body.light-mode #nav-menu .has-dropdown > ul {
-    background-color: white;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-body.light-mode #nav-menu .has-dropdown > ul li a {
-    color: #111;
-}
-
-
-body.light-mode #nav-menu .has-dropdown > ul li a:hover {
-    color: #0d9488;
-}
-
-
-body.light-mode #hamburger {
-    color: #111;
-}
-
-body.light-mode #dark {
-    background-color: white;
-    color: #0d9488;
-}
-
-
-/* Dark Button Hover */
-
-body.light-mode #dark:hover {
-    background-color: #0d9488;
-    color: white;
-}
-
-
 @media (max-width: 1000px) {
 
     header {

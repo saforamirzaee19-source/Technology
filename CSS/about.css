@@ -112,16 +112,22 @@ header {
 }
 
 #quote-btn {
-    padding: 14px 28px;
+    padding: 0;
     border: none;
     border-radius: 50px;
     background-color: #14b8a6;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+#quote-btn a {
+    display: block;
+    padding: 14px 28px;
     color: white;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: all 0.7s;
+    text-decoration: none;
 }
 
 #quote-btn:hover {
@@ -1152,22 +1158,18 @@ main{
     }
 }
 
-/* =========================
-   DARK MODE
-========================= */
+/* Dark mode codes */
 
 body.dark {
     background-color: #000;
     color: white;
 }
 
-/* Shadow becomes completely black */
 body.dark #about .shadow {
     background-color: #000000d4;
     color: white;
 }
 
-/* Description */
 body.dark #about .discribtion h1 {
     color: white;
 }
@@ -1175,94 +1177,25 @@ body.dark #about .discribtion h1 {
 body.dark #about .discribtion p {
     color: #aaa;
 }
-/* Boxes */
+
 body.dark #about .boxes {
     background-color: #000;
     color: white;
 }
 
-
-/* Box headings */
 body.dark #about .text-part h2 {
     color: #14b8a6;
 }
 
-
-/* Box paragraphs */
 body.dark #about .text-part p {
     color: #bdbdbd;
 }
 
-
-/* Hover */
 body.dark #about .boxes:hover .text-part h2 {
     color: #2dd4bf;
 }
 
-
-/* Icons */
 body.dark #about .icons {
     box-shadow: 0 8px 25px #333;
 }
 
-/* Loadin Codes */
-#preloader {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    background-color: #0b0f14;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-#preloader.hide {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-#loader-logo {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: white;
-}
-
-#loader-logo span {
-    color: #14b8a6;
-    animation: pulse-dot 1s ease-in-out infinite;
-}
-
-.loader-ring {
-    width: 46px;
-    height: 46px;
-    border: 4px solid rgba(20, 184, 166, 0.2);
-    border-top-color: #14b8a6;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-@keyframes pulse-dot {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
-}
-
-body.light-mode #preloader {
-    background-color: #f5f5f5;
-}
-
-body.light-mode #loader-logo {
-    color: #111;
-}
-#dark.dark {
-    background-color: black;
-    color: white;
-}

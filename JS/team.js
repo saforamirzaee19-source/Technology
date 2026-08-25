@@ -10,7 +10,6 @@ if (hamburger && navMenu) {
         event.stopPropagation();
 
         navMenu.classList.toggle("active");
-
         const icon = hamburger.querySelector("i");
 
         if (navMenu.classList.contains("active")) {
@@ -128,28 +127,32 @@ if (hamburger && navMenu) {
 }
 
 
-// Dark Mode Section
-function darkThem() {
-    document.body.classList.toggle("dark");
-    document.querySelectorAll("team-members").classList.toggle("boxes")
-    const icon = document.getElementById("them-icon");
+// Dark Mode
+const teamDark = document.querySelectorAll(".team-members");
+const memberDark = document.querySelectorAll(".member");
+
+// Dark mode button
+const darkBtn = document.querySelector("#dark");
+
+// Icon
+const icon = document.querySelector("#dark i");
+
+// Function
+darkBtn.addEventListener("click", function () {
+
+    // Team boxes
+    teamDark.forEach((box) => {
+        box.classList.toggle("cards");
+    });
+
+    // Member names
+    memberDark.forEach((font) => {
+        font.classList.toggle("team-dark-fonts");
+    });
+
+    // Icon
     icon.classList.toggle("fa-sun");
     icon.classList.toggle("fa-moon");
-}
-
-// Loading animation 
-
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-
-    if (preloader) {
-
-        setTimeout(function () {
-            preloader.classList.add("hide");
-        }, 1000);
-
-    }
+    icon.classList.toggle("dark-icon");
 
 });
-
-

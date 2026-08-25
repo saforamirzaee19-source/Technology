@@ -637,21 +637,3 @@ function darkThem() {
     icon.classList.toggle("fa-sun");
     icon.classList.toggle("fa-moon");
 }
-
-
-// LOADING ANIMATION
- 
-
-window.addEventListener("load", function () {
-
-    const preloader = document.getElementById("preloader");
-
-    if (preloader) {
-
-        setTimeout(function () {
-            preloader.classList.add("hide");
-        }, 1500);
-
-    }
-
-});

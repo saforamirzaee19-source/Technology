@@ -48,10 +48,7 @@ if (hamburger && navMenu) {
 
 // Dropdon Menu 
 
-    const dropdownToggles =
-        document.querySelectorAll(".has-dropdown > a");
-
-
+    const dropdownToggles = document.querySelectorAll(".has-dropdown > a");
     dropdownToggles.forEach(function (toggle) {
 
         toggle.addEventListener("click", function (event) {
@@ -75,7 +72,6 @@ if (hamburger && navMenu) {
                     }
 
                 });
-
 
             /* Open / Close current dropdown */
 
@@ -131,25 +127,7 @@ if (hamburger && navMenu) {
 // Dark Mode Section
 function darkThem() {
     document.body.classList.toggle("dark");
-    document.querySelectorAll("team-members").classList.toggle("boxes")
-    const icon = document.getElementById("them-icon");
     icon.classList.toggle("fa-sun");
     icon.classList.toggle("fa-moon");
 }
-
-// Loading animation 
-
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-
-    if (preloader) {
-
-        setTimeout(function () {
-            preloader.classList.add("hide");
-        }, 1000);
-
-    }
-
-});
-
 

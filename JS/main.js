@@ -1,3 +1,42 @@
+// Header Section
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector("#header");
+    const logo = document.querySelector("#logo > h1");
+    const links = document.querySelectorAll("#nav-menu a");
+    const hamburger = document.querySelector("#hamburger");
+    const hamburgerIcon = document.querySelector("#hamburger i");
+
+    if (window.scrollY > 150) {
+
+        header.style.backgroundColor = "white";
+
+        logo.style.color = "#0d9488";
+
+        links.forEach(link => {
+            link.style.color = "#0d9488";
+        });
+
+        hamburger.style.color = "#0d9488";
+        hamburgerIcon.style.color = "#0d9488";
+
+    } else {
+
+        header.style.backgroundColor = "transparent";
+
+        logo.style.color = "";
+
+        links.forEach(link => {
+            link.style.color = "";
+        });
+
+        hamburger.style.color = "";
+        hamburgerIcon.style.color = "";
+    }
+});
+
+
 particlesJS('particles-js', {
     particles: {
         number: { value: 60, density: { enable: true, value_area: 800 } },
@@ -91,30 +130,6 @@ navLinks.forEach(link => {
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
     });
-});
-
-
-// ===== Dark / Light Mode Toggle =====
-const darkBtn = document.getElementById('dark');
-const body = document.body;
-
-if (localStorage.getItem('theme') === 'light') {
-    body.classList.add('light-mode');
-    darkBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-} else {
-    darkBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-}
-
-darkBtn.addEventListener('click', () => {
-    body.classList.toggle('light-mode');
-
-    if (body.classList.contains('light-mode')) {
-        darkBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        localStorage.setItem('theme', 'light');
-    } else {
-        darkBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        localStorage.setItem('theme', 'dark');
-    }
 });
 
 // Services Section 
@@ -594,3 +609,204 @@ window.addEventListener("scroll", function () {
     }
 
 });
+
+// Form Section
+const message = document.querySelector("#message");
+const counter = document.querySelector("#counter");
+
+message.addEventListener("input", () => {
+
+    const feedbackValue = message.value.length;
+
+    if (feedbackValue <= 500) {
+        counter.textContent = `${feedbackValue}`;
+    } else {
+        message.value = message.value.slice(0, 500);
+        counter.textContent = "500";
+    }
+
+});
+
+// Dark mode Codes
+// Variables 
+const servicesDark = document.querySelector(".shado");
+const darkBtn = document.querySelector("#dark");
+// Services Dark mode
+const titleDark = document.querySelector(".title>h1");
+const paragraphDark = document.querySelector(".ser-par");
+const cards = document.querySelectorAll(".service-card");
+const cardTitles = document.querySelectorAll(".service-card h2");
+const cardParagraphs = document.querySelectorAll(".service-card p");
+// Portfolio Dark Mode
+const portofolioDark = document.querySelector("#portfolio");
+const descriptionTitle = document.querySelector("#portfolio .discribtion>h1");
+const descriptionParagraph = document.querySelector("#portfolio .discribtion>p");
+// About Dark Mode
+const aboutDark = document.querySelector(".shadow");
+const aboutDescribtionTitle = document.querySelector("#about .discribtion>h1");
+const aboutDescribtionParagraph = document.querySelector("#about .discribtion>p");
+const aboutBoxText = document.querySelectorAll(".text-part>p");
+// Pricing Dark Mode
+const pricingDark = document.querySelector("#pricing");
+const pricingDescribtion = document.querySelector("#pricing .discribtion>h1");
+const pricingParagraph = document.querySelector("#pricing .discribtion>p");
+const boxes = document.querySelectorAll(".pricing-boxes");
+const content = document.querySelectorAll(".pricing-title-boxes");
+const contentPer = document.querySelectorAll(".per");
+const pricingTitleBoxes = document.querySelectorAll(".pricing-title-boxes");
+const price = document.querySelectorAll(".price");
+// Static Section
+const staticDark = document.querySelector("#statistic");
+// Team Section 
+const teamDark = document.querySelectorAll(".team-members");
+const memberDark = document.querySelectorAll(".member")
+// Question Section
+const questionDark = document.querySelector(".question")
+// Question Section
+const questionTitle = document.querySelector(".question .discribtion > h1");
+const questionParagraph = document.querySelector(".question .discribtion > p");
+const questionBoxes = document.querySelectorAll(".question .accordion-item");
+const questionButtons = document.querySelectorAll(".question .accordion-button");
+// Blog Section 
+const blogDark = document.querySelector("#blog");
+const blogDescribtion = document.querySelector("#blog .discribtion >h1")
+const blogDescribtionParagraph = document.querySelector("#blog .discribtion >p");
+const blogBoxes = document.querySelectorAll(".blog-box")
+const blogBoxesTitle = document.querySelectorAll(".blog-box > h1")
+const blogBoxesParagrph = document.querySelectorAll(".blog-box > p")
+const blogSpan = document.querySelectorAll(".blog-date")
+// Contact Section
+const contactDark = document.querySelector("#contact");
+const contactTitle = document.querySelector("#contact .discribtion > h1");
+const contactParagraph = document.querySelector("#contact .discribtion > p");
+const contactInfo = document.querySelectorAll("#contact .address");
+const contactColors = document.querySelectorAll("#contact .contact-color");
+const contactInputs = document.querySelectorAll("#contact form input");
+const contactMessage = document.querySelector("#contact #message");
+const contactCounter = document.querySelector("#contact #counter");
+const contactButton = document.querySelector("#contact .contect-button");
+
+
+// Icon Of Dark and Light 
+const icon = document.querySelector("#dark i");
+
+
+// Function 
+darkBtn.addEventListener("click", function () {
+    // Services
+    servicesDark.classList.toggle("dark");
+    titleDark.classList.toggle("dark-fonts");
+    paragraphDark.classList.toggle("dark-fonts");
+    cards.forEach(function(card) {
+        card.classList.toggle("cards");
+    });
+    cardTitles.forEach(function(title) {
+        title.classList.toggle("dark-fonts");
+    });
+    cardParagraphs.forEach(function(paragraph) {
+        paragraph.classList.toggle("dark-fonts");
+    });
+    // Portfolio
+    portofolioDark.classList.toggle("cards");
+    descriptionTitle.classList.toggle("dark-fonts");
+    descriptionParagraph.classList.toggle("dark-fonts");
+    // About
+    aboutDark.classList.toggle("dark");
+    aboutDescribtionTitle.classList.toggle("dark-fonts");
+    aboutDescribtionParagraph.classList.toggle("dark-fonts");
+    aboutBoxText.forEach((text) => {
+        text.classList.toggle("dark-fonts");
+    });
+// Pricing
+    pricingDark.classList.toggle("cards");
+    pricingDescribtion.classList.toggle("dark-fonts");
+    pricingParagraph.classList.toggle("dark-fonts");
+    boxes.forEach((box) => {
+    box.classList.toggle("boxes-dark");
+    });
+    content.forEach((content) => {
+    content.classList.toggle("question-fonts");
+    });
+    contentPer.forEach((per) => {
+    per.classList.toggle("dark-fonts");
+    });
+    pricingTitleBoxes.forEach((title) => {
+    title.classList.toggle("dark-fonts");
+    });
+    // Testimonial 
+    document.getElementById("testimonials").classList.toggle("dark");
+    // Static Section
+    staticDark.classList.toggle("static-dark");
+    // Team 
+    teamDark.forEach((box)=>{
+        box.classList.toggle("cards")
+    });
+    memberDark.forEach((font)=>{
+        font.classList.toggle("team-dark-fonts")
+    });
+    // Question
+    questionDark.classList.toggle("cards");
+    // Question
+    questionTitle.classList.toggle("question-fonts");
+    questionParagraph.classList.toggle("question-fonts");
+    questionBoxes.forEach((box) => {
+    box.classList.toggle("question-dark");
+    });
+    questionButtons.forEach((button) => {
+    button.classList.toggle("question-button-dark");
+});
+    // Blog
+    blogDark.classList.toggle("cards");
+    blogDescribtion.classList.toggle("team-dark-fonts")
+    blogDescribtionParagraph.classList.toggle("team-dark-fonts")
+    blogBoxes.forEach((blogBox)=>{
+        blogBox.classList.toggle("boxes-dark")
+    })
+    blogBoxesTitle.forEach((boxTitle)=>{
+        boxTitle.classList.toggle("question-fonts")
+    })
+    blogBoxesParagrph.forEach((boxParagraph)=>{
+    boxParagraph.classList.toggle("question-fonts")
+    })
+    blogSpan.forEach((date)=>{
+        date.classList.toggle("date")
+    });
+    // Contact
+    contactDark.classList.toggle("contact-dark");
+    contactTitle.classList.toggle("contact-fonts");
+    contactParagraph.classList.toggle("contact-fonts");
+    contactInfo.forEach((box) => {
+    box.classList.toggle("contact-fonts");
+    });
+    contactColors.forEach((color) => {
+    color.classList.toggle("contact-color-dark");
+    });
+    contactInputs.forEach((input) => {
+    input.classList.toggle("contact-input-dark");
+    });
+    contactMessage.classList.toggle("contact-input-dark");
+    contactCounter.classList.toggle("contact-fonts");
+    contactButton.classList.toggle("contact-button-dark");
+
+    // Icon Of Dark and Light
+icon.classList.toggle("fa-sun");
+icon.classList.toggle("fa-moon");
+icon.classList.toggle("dark-icon");
+
+});
+ 
+// Loading Codes 
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        const preloader = document.getElementById("preloader");
+
+        if (preloader) {
+            preloader.classList.add("hide");
+        }
+
+    }, 2000);
+
+});
+

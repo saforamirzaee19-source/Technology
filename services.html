@@ -15,24 +15,12 @@
 </head>
 
 <body>
-
-<!-- Loading Screen -->
-<div id="preloader">
-    <div id="loader-logo">
-        techno<span>.</span>
-    </div>
-    <div class="loader-ring"></div>
-</div>
-
 <!-- Header Section Started in here -->
-    <header>
+    <header id="header">
 
         <!-- Logo -->
         <div id="logo">
-            <h1>
-                techno
-                <img src="images/ai-icon.png" alt="AI Icon">
-            </h1>
+            <h1> techno <img src="images/ai-icon.png" alt="AI Icon"> </h1>
         </div>
 
 
@@ -67,10 +55,10 @@
         <!-- Burger Menu Icon -->
         <button id="hamburger" aria-label="Toggle menu"> <i class="fa-solid fa-bars"></i> </button>
 
-
-        <!-- Dark / Light Mode -->
+        <!-- Dark Mode -->
         <button id="dark" aria-label="Toggle dark mode"> <i class="fa-solid fa-sun"></i> </button>
-        <button id="quote-btn"> GET QUOTES </button>
+        <!-- Quote Button -->
+        <button id="quote-btn"> <a href="get.html">GET QUOTES</a></button>
 
     </header>
 
@@ -89,9 +77,7 @@
     <div class="shado">
         <div class="title">
             <h1>Services We Offer</h1>
-            <p class="ser-par">
-                Explore our creative solutions that make a real difference.
-            </p>
+            <p class="ser-par"> Explore our creative solutions that make a real difference. </p>
 
             <!-- Services boxes are created with JS -->
             <div id="services-container"></div>
@@ -102,8 +88,11 @@
 
 <!-- End of Services Section -->
 
+    </main>
 
-<!-- ================= FOOTER START ================= -->
+
+
+<!--  Footer section strated....  -->
 
 <footer id="footer">
 
@@ -112,29 +101,17 @@
         <!-- Logo + Description -->
         <div class="footer-logo">
 
-            <h1>
-                techno
-                <img src="images/ai-icon.png" alt="AI Icon">
-            </h1>
-
-            <p>
-                We provide innovative solutions tailored to your
-                needs. Join us in transforming your digital landscape.
-            </p>
+            <h1> techno <img src="images/ai-icon.png" alt="AI Icon"> </h1>
+            <p> We provide innovative solutions tailored to your needs. Join us in transforming your digital landscape. </p>
 
             <!-- Social Media -->
             <div class="social-media-footer">
 
                 <h3>Follow Us</h3>
-
                 <div class="social-icons">
-
                     <i class="fa-brands fa-x-twitter"></i>
-
                     <i class="fa-brands fa-square-facebook"></i>
-
                     <i class="fa-brands fa-linkedin"></i>
-
                     <i class="fa-brands fa-instagram"></i>
 
                 </div>
@@ -203,21 +180,10 @@
             <div class="newsletter">
 
                 <h2>Newsletter</h2>
-
-                <p>
-                    Subscribe to our newsletter for the latest updates!
-                </p>
-
+                <p> Subscribe to our newsletter for the latest updates! </p>
                 <div class="newsletter-form">
-
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                    >
-
-                    <button type="submit">
-                        <i class="fa-regular fa-paper-plane"></i>
-                    </button>
+                    <input type="email" placeholder="Email Address">
+                    <button type="submit"> <i class="fa-regular fa-paper-plane"></i> </button>
 
                 </div>
 
@@ -231,9 +197,7 @@
     <!-- Copyright -->
     <div class="copy">
 
-        <p>
-            © 2026 Your Company.
-            Designed with passion by
+        <p> © 2026 Your Company. Designed with passion by 
             <span>Miss Safora Mirzaee</span>
         </p>
 
@@ -241,11 +205,7 @@
 
 </footer>
 
-<!-- ================= FOOTER END ================= -->
-
 <!-- End of Footer -->
-    </main>
-
 
     <!-- JavaScript -->
     <script src="/JS/services.js"></script>

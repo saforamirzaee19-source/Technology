@@ -21,7 +21,7 @@
 <body>
 
     <!-- Header Part Started in here -->
-    <header>
+    <header id="header">
         <div id="logo">
             <h1>techno <img src="images/ai-icon.png" alt="" height="60px" width="60px"></h1>
         </div>
@@ -51,16 +51,17 @@
         <button id="hamburger" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
         </button>
-
-        <button id="quote-btn">GET QUOTES</button>
+        <!-- Quote Button -->
+        <button id="quote-btn"> <a href="get.html">GET QUOTES</a></button>
     </header>
     <!-- Header Part ended in here... -->
 
     <!-- Main Section Strated in here -->
 
     <main>
-            <!-- Floating Buttons: dark mode toggle -->
-    <button id="dark" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+            <!--  dark mode toggle -->
+    <button id="dark" aria-label="Toggle dark mode"><i class="fa-solid fa-sun"></i></button>
+    
         <section id="home">
             <div id="particles-js"></div>
 
@@ -864,6 +865,8 @@
 
 </section>
 <!-- End of blog section..... -->
+
+<!-- Contact Section  -->
 <section id="contact">
 
     <div class="discribtion">
@@ -900,7 +903,8 @@
             <input type="text" placeholder="Name*">
             <input type="email" placeholder="Email*">
             <input type="text" placeholder="Subject*">
-            <textarea placeholder="Write Your Message*"></textarea>
+            <textarea placeholder="Write Your Message*" id="message"></textarea>
+            <p id="counter"></p>
             <button class="contect-button"> SEND MESSAGE </button>
 
         </form>
@@ -911,7 +915,7 @@
     </main>
 
 
-<!-- ================= FOOTER START ================= -->
+<!--  Footer Section Strated  -->
 
 <footer id="footer">
 
@@ -936,13 +940,9 @@
                 <h3>Follow Us</h3>
 
                 <div class="social-icons">
-
                     <i class="fa-brands fa-x-twitter"></i>
-
                     <i class="fa-brands fa-square-facebook"></i>
-
                     <i class="fa-brands fa-linkedin"></i>
-
                     <i class="fa-brands fa-instagram"></i>
 
                 </div>
@@ -1049,14 +1049,25 @@
 
 </footer>
 
-
 <!-- End of Footer -->
+
+    <!-- loder  -->
+    <div id="preloader">
+
+    <div class="loader">
+        <div class="loader-ring"></div>
+
+        <div class="loader-core">
+            <span></span>
+        </div>
+    </div>
+
+</div>
 
     <!-- Scripts -->
 
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="JS/particles-config.js"></script>
     <script src="JS/main.js"></script>
 </body>
 </html>
