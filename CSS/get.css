@@ -941,3 +941,46 @@ main{
         height: 54px;
     }
 }
+
+
+/* Dark Mode */
+body.dark {
+    background-color: #111;
+    color: white;
+}
+
+#contact.dark {
+    background-color: #111;
+}
+
+#contact .dark-text {
+    color: white;
+}
+
+#contact .dark-input {
+    background-color: #222;
+    color: white;
+    border-color: #555;
+}
+
+#contact .dark-input::placeholder {
+    color: #aaa;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d9488;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0f766e;
+}

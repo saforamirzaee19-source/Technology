@@ -30,7 +30,7 @@
 
     <!--  Header Started in here -->
 
-    <header>
+    <header id="header">
         <!-- Logo -->
         <div id="logo">
             <h1> techno <img src="images/ai-icon.png" alt="AI Icon"> </h1>
@@ -101,7 +101,6 @@
     </div>
 
     <div class="contact-content">
-
         <div class="contact-info">
 
             <div class="address">
@@ -125,13 +124,19 @@
         </div>
 
 
-        <form action="#">
-            <input type="text" placeholder="Name*">
-            <input type="email" placeholder="Email*">
-            <input type="text" placeholder="Subject*">
-            <textarea placeholder="Write Your Message*" id="message"></textarea>
-            <p id="counter"></p>
-            <button class="contect-button"> SEND MESSAGE </button>
+        <form id="contactForm">
+        <input type="text" placeholder="Name*" id="name">
+        <input type="email" placeholder="Email*" id="email">
+        <input type="text" placeholder="Subject*" id="subject">
+        <textarea
+        placeholder="Write Your Message*" id="message"> </textarea>
+        <p id="counter"> 0 /500 </p>
+
+        <button type="submit" class="contect-button">
+        SEND MESSAGE
+        </button>
+
+        <p id="formMessage"></p>
 
         </form>
 

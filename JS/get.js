@@ -1,3 +1,41 @@
+// Header Section
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector("#header");
+    const logo = document.querySelector("#logo > h1");
+    const links = document.querySelectorAll("#nav-menu a");
+    const hamburger = document.querySelector("#hamburger");
+    const hamburgerIcon = document.querySelector("#hamburger i");
+
+    if (window.scrollY > 150) {
+
+        header.style.backgroundColor = "white";
+
+        logo.style.color = "#0d9488";
+
+        links.forEach(link => {
+            link.style.color = "#0d9488";
+        });
+
+        hamburger.style.color = "#0d9488";
+        hamburgerIcon.style.color = "#0d9488";
+
+    } else {
+
+        header.style.backgroundColor = "black";
+
+        logo.style.color = "";
+
+        links.forEach(link => {
+            link.style.color = "";
+        });
+
+        hamburger.style.color = "";
+        hamburgerIcon.style.color = "";
+    }
+});
+
 // Burger Menu 
 
 const hamburger = document.getElementById("hamburger");
@@ -127,48 +165,80 @@ if (hamburger && navMenu) {
 
 }
 
+// Contact Section 
 // Text Codes 
+
 const message = document.querySelector("#message");
 const counter = document.querySelector("#counter");
 
 message.addEventListener("input", () => {
-
     const feedbackValue = message.value.length;
+    if (feedbackValue <= 500) {
+        counter.textContent = `${feedbackValue} / 500`;
 
-    if (feedbackValue <= 200) {
-        counter.textContent = `${feedbackValue}`;
     } else {
-        message.value = message.value.slice(0, 200);
-        counter.textContent = "200";
+        message.value = message.value.slice(0, 500);
+        counter.textContent = `500 / 500`;
     }
 
+});
+
+
+// Contact Form Validation
+
+const form = document.querySelector("#contactForm");
+const formMessage = document.querySelector("#formMessage");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const subject = document.querySelector("#subject").value.trim();
+    const message = document.querySelector("#message").value.trim();
+
+    // Check empty inputs
+    if (name === "" || email === "" || subject === "" || message === "") {
+
+        formMessage.textContent = "Please fill in all the fields.";
+        formMessage.style.color = "red";
+
+    } else {
+
+        formMessage.textContent = "Your message has been sent successfully!";
+        formMessage.style.color = "green";
+
+        form.reset();
+    }
 });
 
 // Dark Mode Section
 
 const icon = document.querySelector("#them-icon");
+
 function darkThem() {
+
+    // Dark mode for whole page
     document.body.classList.toggle("dark");
-    document.querySelectorAll("#blog h1").forEach(function(h1) {
-        h1.classList.toggle("dark-text");
-    });
-    document.querySelectorAll("#blog h2").forEach(function(h2) {
-        h2.classList.toggle("dark-text");
-    });
-    document.querySelectorAll("#blog h3").forEach(function(h3) {
-        h3.classList.toggle("dark-text");
-    });
-    document.querySelectorAll("#blog p").forEach(function(p) {
-        p.classList.toggle("dark-text");
-    });
-    document.querySelectorAll("#blog .blog-date").forEach(function(date) {
-        date.classList.toggle("dark-text");
-    });
-    document.querySelectorAll("#blog .posts button a").forEach(function(link) {
-        link.classList.toggle("dark-text");
+
+    // Contact section
+    document.querySelector("#contact").classList.toggle("dark");
+
+    // Contact title and paragraph
+    document.querySelectorAll("#contact h1, #contact p").forEach(function(element) {
+        element.classList.toggle("dark-text");
     });
 
+    // Contact labels
+    document.querySelectorAll("#contact .contact-color").forEach(function(element) {
+        element.classList.toggle("dark-text");
+    });
+
+    // Inputs and textarea
+    document.querySelectorAll("#contact input, #contact textarea").forEach(function(element) {
+        element.classList.toggle("dark-input");
+    });
+
+    // Change icon
     icon.classList.toggle("fa-sun");
     icon.classList.toggle("fa-moon");
 }
-

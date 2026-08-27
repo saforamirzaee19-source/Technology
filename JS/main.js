@@ -37,42 +37,6 @@ window.addEventListener("scroll", () => {
 });
 
 
-particlesJS('particles-js', {
-    particles: {
-        number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: "#ffffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 3, random: true },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#2dd4bf",
-            opacity: 0.4,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 1.5,
-            direction: "none",
-            random: true,
-            straight: false,
-            out_mode: "out"
-        }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: { enable: true, mode: "grab" },
-            onclick: { enable: false }
-        },
-        modes: {
-            grab: { distance: 140, line_linked: { opacity: 0.6 } }
-        }
-    },
-    retina_detect: true
-});
-
 // Hamburger Menu Toggle 
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
@@ -131,6 +95,44 @@ navLinks.forEach(link => {
         icon.classList.add('fa-bars');
     });
 });
+
+// Particles.js script Library for home section
+particlesJS('particles-js', {
+    particles: {
+        number: { value: 60, density: { enable: true, value_area: 960 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 4, random: true },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#2dd4bf",
+            opacity: 0.4,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out"
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: false }
+        },
+        modes: {
+            grab: { distance: 140, line_linked: { opacity: 0.6 } }
+        }
+    },
+    retina_detect: true
+});
+
 
 // Services Section 
 
@@ -610,22 +612,53 @@ window.addEventListener("scroll", function () {
 
 });
 
-// Form Section
+
+// Contact Section 
+// Text Codes 
+
 const message = document.querySelector("#message");
 const counter = document.querySelector("#counter");
 
 message.addEventListener("input", () => {
-
     const feedbackValue = message.value.length;
-
     if (feedbackValue <= 500) {
-        counter.textContent = `${feedbackValue}`;
+        counter.textContent = `${feedbackValue} / 500`;
+
     } else {
         message.value = message.value.slice(0, 500);
-        counter.textContent = "500";
+        counter.textContent = `500 / 500`;
+
     }
 
 });
+
+
+// Contact Form V
+
+const form = document.querySelector("#contactForm");
+const formMessage = document.querySelector("#formMessage");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const subject = document.querySelector("#subject").value.trim();
+    const message = document.querySelector("#message").value.trim();
+
+    if (name === "" || email === "" || subject === "" || message === "") {
+
+        formMessage.textContent = "Please fill in all the fields.";
+        formMessage.style.color = "red";
+
+    } else {
+
+        formMessage.textContent = "Your message has been sent successfully!";
+        formMessage.style.color = "green";
+
+        form.reset();
+    }
+});
+
 
 // Dark mode Codes
 // Variables 
@@ -791,7 +824,6 @@ darkBtn.addEventListener("click", function () {
     // Icon Of Dark and Light
 icon.classList.toggle("fa-sun");
 icon.classList.toggle("fa-moon");
-icon.classList.toggle("dark-icon");
 
 });
  

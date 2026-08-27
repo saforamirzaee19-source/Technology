@@ -12,18 +12,18 @@ window.addEventListener("scroll", () => {
 
         header.style.backgroundColor = "white";
 
-        logo.style.color = "black";
+        logo.style.color = "#0d9488";
 
         links.forEach(link => {
-            link.style.color = "black";
+            link.style.color = "#0d9488";
         });
 
-        hamburger.style.color = "black";
-        hamburgerIcon.style.color = "black";
+        hamburger.style.color = "#0d9488";
+        hamburgerIcon.style.color = "#0d9488";
 
     } else {
 
-        header.style.backgroundColor = "transparent";
+        header.style.backgroundColor = "black";
 
         logo.style.color = "";
 
@@ -35,6 +35,7 @@ window.addEventListener("scroll", () => {
         hamburgerIcon.style.color = "";
     }
 });
+
 
 // Burger Menu 
 const hamburger = document.getElementById("hamburger");
