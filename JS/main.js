@@ -827,7 +827,7 @@ icon.classList.toggle("fa-moon");
 
 });
  
-// Loading Codes 
+// // Loading Codes 
 window.addEventListener("load", function () {
 
     setTimeout(function () {
