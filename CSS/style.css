@@ -153,7 +153,7 @@ nav ul li ul li a{
 
 /* Home Section */
 #home{
-    background-image: url("/AI-robot.png");
+    background-image: url("../AI-robot.png");
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
