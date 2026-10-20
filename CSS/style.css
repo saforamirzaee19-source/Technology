@@ -151,6 +151,9 @@ nav ul li ul li a{
     z-index: 50;
 }
 
+.dark-back{
+    background-color: white;
+}
 /* Home Section */
 #home{
     background-image: url("../AI-robot.png");
@@ -3236,3 +3239,5 @@ body.dark .loader-core span {
 ::-webkit-scrollbar-thumb:hover {
     background: #0f766e;
 }
+
+
